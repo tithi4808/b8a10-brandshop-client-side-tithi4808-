@@ -14,6 +14,10 @@ import AddProducts from './assets/Components/Pages/Addproduct/Addproduct.jsx';
 import Nestle from './assets/Components/Pages/BrandProducts/Brandproducts.jsx';
 import Addbrands from './assets/Components/AddBrands/Addbrands.jsx';
 import BrandProducts from './assets/Components/Pages/BrandProducts/Brandproducts.jsx';
+import PrivateRoute from './assets/Components/Pages/Privateroute/Privateroute.jsx';
+import Productdetails from './assets/Components/Pages/Home/Productdetails/Productdetails.jsx';
+import Addproductdetails from './assets/Components/Pages/Addproductdetails/Addproductsdetails.jsx';
+import Mycart from './assets/Components/Pages/Mycart/Mycart.jsx';
 
 
 const router = createBrowserRouter([
@@ -35,7 +39,7 @@ const router = createBrowserRouter([
       },
       {
         path:"/addproducts",
-        element:<AddProducts></AddProducts>
+        element:<PrivateRoute><AddProducts></AddProducts></PrivateRoute>
       },
       {
         path:"brands/:name",
@@ -45,7 +49,21 @@ const router = createBrowserRouter([
       {
         path:"/addbrands",
         element:<Addbrands></Addbrands>
-      }
+      },
+      {
+        path:"/products/:name",
+        element:<Productdetails></Productdetails>,
+        loader:({params})=>fetch("http://localhost:5000/details")
+      },
+      {
+        path:"/adddetails",
+        element:<Addproductdetails></Addproductdetails>
+      },
+      {
+        path:"/cart",
+        element:<Mycart></Mycart>,
+        loader:()=>fetch('http://localhost:5000/cart')
+      },
     ]
   },
 ]);

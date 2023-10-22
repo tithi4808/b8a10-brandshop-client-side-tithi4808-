@@ -20,7 +20,7 @@ const Brand = ({brand}) => {
                 <h2 className=" text-center text-3xl  font-bold italic rounded-3xl">{name}</h2>
                 
             </div>
-            <figure><img src={brand_image} alt="Shoes" /></figure>
+            <figure><img src={brand_image} alt="" /></figure>
             </div>
         </div>
     );

@@ -13,8 +13,9 @@ const AddProducts = () => {
         const description = form.description.value;
         const rating = form.rating.value;
         const image= form.image.value;
+       
 
-        const NewBrands = { name, brand_name, type, price, description, rating, image }
+        const NewBrands = { name, brand_name, type, price, description, rating, image}
 
         console.log(NewBrands);
         
@@ -63,30 +64,7 @@ const AddProducts = () => {
                         </label>
                     </div>
 
-                    <div className="form-control ">
-                        <label className="label">
-                            <span className="label-text">Advertisement banner image</span>
-                        </label>
-                        <label className="input-group">
-                            <input type="text" name="image" placeholder="Image URL" className="input input-bordered w-full" />
-                        </label>
-                    </div>
-                    <div className="form-control ">
-                        <label className="label">
-                            <span className="label-text">Advertisement banner image</span>
-                        </label>
-                        <label className="input-group">
-                            <input type="text" name="image" placeholder="Image URL" className="input input-bordered w-full" />
-                        </label>
-                    </div>
-                    <div className="form-control ">
-                        <label className="label">
-                            <span className="label-text">Advertisement banner image</span>
-                        </label>
-                        <label className="input-group">
-                            <input type="text" name="image" placeholder="Image URL" className="input input-bordered w-full" />
-                        </label>
-                    </div>
+                   
                     <div className="form-control ">
                         <label className="label">
                             <span className="label-text">Product Type</span>

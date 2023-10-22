@@ -8,9 +8,12 @@ const Addbrands = () => {
 
         const name = form.name.value;
         const brand_image = form.brand_image.value;
+        const image1= form.image1.value;
+        const image2= form.image2.value;
+        const image3= form.image3.value;
        
 
-        const NewBrands = { name, brand_image}
+        const NewBrands = { name, brand_image,image1,image2,image3}
 
         console.log(NewBrands);
         
@@ -48,6 +51,30 @@ const Addbrands = () => {
                         </label>
                         <label className="input-group">
                             <input type="text" name="brand_image" placeholder="Brand image" className="input input-bordered w-full" />
+                        </label>
+                    </div>
+                    <div className="form-control ">
+                        <label className="label">
+                            <span className="label-text">Advertise image</span>
+                        </label>
+                        <label className="input-group">
+                            <input type="text" name="image1" placeholder="Brand image" className="input input-bordered w-full" />
+                        </label>
+                    </div>
+                    <div className="form-control ">
+                        <label className="label">
+                            <span className="label-text">Advertise image</span>
+                        </label>
+                        <label className="input-group">
+                            <input type="text" name="image2" placeholder="Brand image" className="input input-bordered w-full" />
+                        </label>
+                    </div>
+                    <div className="form-control ">
+                        <label className="label">
+                            <span className="label-text">Advertise image</span>
+                        </label>
+                        <label className="input-group">
+                            <input type="text" name="image3" placeholder="Brand image" className="input input-bordered w-full" />
                         </label>
                     </div>
 

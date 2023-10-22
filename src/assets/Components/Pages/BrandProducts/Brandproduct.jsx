@@ -1,11 +1,18 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Brandproduct = ({data}) => {
     const {_id,name,brand_name,type,price,description,rating,image}=data
+    const navigate=useNavigate()
+
+    const handledetails=()=>{
+        navigate(`/products/${name}`)
+
+    }
     return (
         <div className='mb-20 bg-base-100 shadow-lg px-4 py-8 rounded-3xl  gap-6'>
-           <div className='flex items-center justify-center'>
-           <img src={image} className='rounded-3xl ' alt="" />
+           <div className='flex items-center justify-center mb-10'>
+           <img src={image} className='rounded-3xl h-80' alt="" />
            </div>
 
          <div className='text-center'>
@@ -16,7 +23,7 @@ const Brandproduct = ({data}) => {
          <p><span className='font-semibold'>Description:</span> {description}</p>
          <p><span className='font-semibold'>Rating:</span> {rating}</p>
          <div className='space-x-4 mt-4'>
-         <button className='btn bg-orange-400'>Details</button>
+         <button onClick={handledetails} className='btn bg-orange-400'>Details</button>
          <button className='btn bg-red-400'>Update</button>
          </div>
 

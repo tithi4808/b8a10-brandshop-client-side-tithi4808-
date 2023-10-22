@@ -32,14 +32,15 @@ const Navbar = () => {
   } to='/addproducts'>Add Products</NavLink>
        <NavLink className={({ isActive, isPending }) =>
     isPending ? "pending" : isActive ? "text-red-400 text-black px-2 rounded-lg" : ""
-  } to='/'>My Cart</NavLink>
+  } to='/cart'>My Cart</NavLink>
         
         
        
 
     </>
     return (
-        <div className="navbar">
+       <div className='lg:mx-20'>
+         <div className="navbar ">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -79,6 +80,7 @@ const Navbar = () => {
         }
         </div>
       </div>
+       </div>
     );
 };
 
