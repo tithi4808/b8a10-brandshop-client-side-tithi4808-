@@ -5,8 +5,14 @@ const Brandproduct = ({data}) => {
     const {_id,name,brand_name,type,price,description,rating,image}=data
     const navigate=useNavigate()
 
+    
+
     const handledetails=()=>{
         navigate(`/products/${name}`)
+
+    }
+    const handleupdate=()=>{
+        navigate(`/update/${_id}`)
 
     }
     return (
@@ -24,7 +30,7 @@ const Brandproduct = ({data}) => {
          <p><span className='font-semibold'>Rating:</span> {rating}</p>
          <div className='space-x-4 mt-4'>
          <button onClick={handledetails} className='btn bg-orange-400'>Details</button>
-         <button className='btn bg-red-400'>Update</button>
+         <button onClick={handleupdate} className='btn bg-red-400'>Update</button>
          </div>
 
             
