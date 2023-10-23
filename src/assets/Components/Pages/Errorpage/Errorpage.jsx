@@ -8,9 +8,9 @@ const Errorpage = () => {
             <p className="text-2xl text-center mb-16">Sorry,This page doesn't exist</p>
 
             
-           <div className='flex justify-center items-center'> <button className="bg-gray-300 text-center px-4 py-2 text-black font-bold rounded"><NavLink to='/'>Go Back</NavLink></button></div>
+           <div className='flex justify-center items-center'> <NavLink className="text-orange-500" to='/'>Go Back</NavLink>
             
-        </div>
+        </div> </div>
     );
 };
 
