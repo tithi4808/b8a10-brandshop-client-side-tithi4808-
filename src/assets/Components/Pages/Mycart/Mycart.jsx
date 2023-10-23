@@ -46,6 +46,10 @@ const Mycart = () => {
         
     }
 
+    const handleorder=()=>{
+        Swal.fire("Ordered Succeessfully")
+    }
+
 
     
     return (
@@ -56,7 +60,7 @@ const Mycart = () => {
                     <div className='py-8 '>
                     <p className=' text-center md:text-start text-2xl font-bold mb-4'>{cart.name}</p>
                      <div className='flex justify-center items-center gap-4'>
-                     <button className='btn bg-orange-200 '>Order item</button>
+                     <button onClick={handleorder} className='btn bg-orange-200 '>Order item</button>
                      <button onClick={()=>handledelete(cart._id)} className='btn bg-red-200 '>Delete item</button>
                      </div>
                     </div>
