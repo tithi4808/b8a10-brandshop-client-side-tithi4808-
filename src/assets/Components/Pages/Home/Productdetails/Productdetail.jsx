@@ -1,4 +1,5 @@
 import React from 'react';
+import Swal from 'sweetalert2'
 
 const Productdetail = ({data}) => {
 
@@ -18,7 +19,8 @@ const Productdetail = ({data}) => {
         })
         .then(res=>res.json())
         .then(data=>console.log(data))
-        
+
+        Swal.fire('Added to cart')
        
 
         

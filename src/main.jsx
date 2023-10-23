@@ -19,12 +19,14 @@ import Productdetails from './assets/Components/Pages/Home/Productdetails/Produc
 import Addproductdetails from './assets/Components/Pages/Addproductdetails/Addproductsdetails.jsx';
 import Mycart from './assets/Components/Pages/Mycart/Mycart.jsx';
 import Updatepage from './assets/Components/Pages/Updatepage/Updatepage.jsx';
+import Errorpage from './assets/Components/Pages/Errorpage/Errorpage.jsx';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+    errorElement:<Errorpage></Errorpage>,
     children:[
       {
         path:"/",
@@ -53,7 +55,7 @@ const router = createBrowserRouter([
       },
       {
         path:"/products/:name",
-        element:<Productdetails></Productdetails>,
+        element:<PrivateRoute><Productdetails></Productdetails></PrivateRoute>,
         loader:({params})=>fetch("http://localhost:5000/details")
       },
       {
@@ -62,12 +64,12 @@ const router = createBrowserRouter([
       },
       {
         path:"/cart",
-        element:<Mycart></Mycart>,
+        element:<PrivateRoute><Mycart></Mycart></PrivateRoute>,
         loader:()=>fetch('http://localhost:5000/cart')
       },
       {
         path:"/update/:id",
-        element:<Updatepage></Updatepage>,
+        element:<PrivateRoute><Updatepage></Updatepage></PrivateRoute>,
         loader:({params})=>fetch(`http://localhost:5000/Products/${params.id}`)
       },
     ]

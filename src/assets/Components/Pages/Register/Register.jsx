@@ -72,7 +72,7 @@ const Register = () => {
     }
     return (
         <div>
-        <div className="hero min-h-screen bg-sky-50">
+        <div className="hero min-h-screen bg-gray-50">
 <div className="hero-content flex-col">
 <div className="text-center lg:text-left">
   <h1 className="text-4xl font-bold mb-4">Register now!</h1>
@@ -106,7 +106,7 @@ const Register = () => {
       
     </div>
     <div className="form-control mt-6">
-      <button className="btn bg-sky-300">Register</button>
+      <button className="btn bg-gray-300">Register</button>
     </div>
     <p className='mt-4 text-sm'>Already have an account?Please <span> <NavLink className='text-blue-400 hover:underline' to='/login'>Login</NavLink> </span> </p>
 

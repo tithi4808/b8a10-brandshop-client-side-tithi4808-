@@ -40,7 +40,7 @@ const Login = () => {
 
     return (
         <div>
-            <div className="hero min-h-screen bg-sky-50">
+            <div className="hero min-h-screen bg-gray-50">
   <div className="hero-content flex-col">
     <div className="text-center lg:text-left">
       <h1 className="text-4xl font-bold mb-4">Login now!</h1>
@@ -64,7 +64,7 @@ const Login = () => {
           </label>
         </div>
         <div className="form-control mt-6">
-          <button className='btn  bg-sky-300 text-white '>Login</button>
+          <button className='btn  bg-gray-300 text-white '>Login</button>
         </div>
         <div className="form-control ">
           <button onClick={handlegooglelogin} className='btn'>Login with Google</button>
